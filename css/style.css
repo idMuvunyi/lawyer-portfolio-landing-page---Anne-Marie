@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+  --primary-color: #00bfa6;
+  --secondary-color: #ddf6f3;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #002240;
+}
+
+p {
+  margin: 10px 0;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.3;
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 70px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  margin: 0 5px;
+  padding: 10px;
+  color: #fff;
+}
+
+.navbar a:hover {
+  border-top: 5px solid #fff;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+/* About */
+
+.about .social {
+  margin-left: 20px;
+  color: var(--secondary-color);
+}
+
+.about .social:hover {
+  transform: translateY(5px);
+  color: var(--primary-color);
+}
+
+.about {
+  height: 400px;
+  position: relative;
+}
+
+.about img {
+  animation: slideFromLeft 1s ease-in;
+}
+
+.about .about-text {
+  animation: slideFromRight 1s ease-in;
+}
+
+.about h1 {
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.about p {
+  margin: 10px 0;
+}
+
+.about .grid {
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+  overflow: visible;
+}
+
+.areas {
+  padding-top: 100px;
+  margin-top: 40px;
+  padding-bottom: 50px;
+  background-color: var(--secondary-color);
+}
+
+.areas .grid {
+  align-items: flex-start;
+}
+
+.areas .grid h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.areas .grid p {
+  color: #333;
+}
+
+.areas .grid h4 {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.areas .card {
+  animation: slideFromTop 1s ease-in-out;
+}
+.areas .card:hover {
+  border-right: 5px solid #002240;
+}
+
+.areas .areas-item p {
+  color: #333;
+  margin-left: 10px;
+}
+.areas .areas-item i {
+  color: var(--primary-color);
+}
+
+.experience .grid h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.experience .grid h3,
+.experience .grid span {
+  margin: 10px;
+  font-weight: bold;
+  color: var(--dark-color);
+}
+
+.expertise {
+  background-color: var(--light-color);
+}
+
+.expertise .card {
+  text-align: center;
+  margin: 18px 10px 40px;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.2);
+  background-color: #555;
+  transition: transform 0.2s ease-in;
+}
+
+.expertise .card:hover {
+  transform: translateY(-15px);
+  background-color: #444;
+}
+
+.expertise .card h4 {
+  text-align: center;
+}
+
+.consult .grid h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.contact {
+  background-color: var(--light-color);
+}
+
+.contact .card {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.form-contact .form-control {
+  margin: 10px 0;
+}
+
+.form-contact input[type='text'],
+.form-contact input[type='email'],
+.form-contact input[type='text'],
+.form-contact textarea {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.form-contact input:focus,
+.form-contact textarea:focus {
+  outline: none;
+}
+
+.bg-dark a {
+  color: #fff;
+}
+
+.footer .grid h1,
+.footer .grid p {
+  color: #ddf6f3;
+}
+
+.footer .socials a {
+  margin: 0 10px;
+}
+
+.footer .socials a:hover {
+  color: var(--primary-color);
+}
+
+/* Animations */
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Tablet and under */
+
+@media (max-width: 768px) {
+  .grid,
+  .about .grid,
+  .areas .grid,
+  .experience .grid,
+  .consult .grid,
+  .footer .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .about {
+    height: auto;
+  }
+  .about-text {
+    text-align: center;
+  }
+
+  .about img {
+    justify-self: center;
+    margin-top: 40px;
+  }
+
+  .expertise .flex {
+    flex-wrap: wrap;
+  }
+
+  .consult-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    height: 110px;
+  }
+  .navbar .flex {
+    flex-direction: column;
+  }
+  .navbar ul {
+    font-size: 14px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
